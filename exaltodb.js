@@ -6,7 +6,7 @@ require("dotenv").config
 
 mongoose
   .connect(
-    "mongodb+srv://swapnil:swapnil@cluster0.tush2vw.mongodb.net/SUG-TEST?retryWrites=true&w=majority"
+    process.env.mongoUrl
   )
   .then(() => console.log("Connected to MongoDB..."))
   .catch((err) => console.error("Could not connect to MongoDB...", err));
